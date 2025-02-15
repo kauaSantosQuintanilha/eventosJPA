@@ -19,8 +19,7 @@ public class Participante {
             joinColumns = @JoinColumn(name = "participante_id"),
             inverseJoinColumns = @JoinColumn(name = "evento_id"))
     private Set<evento> eventos;
-    @ManyToOne
-    @JoinColumn(name = "ingresso_id")
-    private Ingresso ingresso;
+   @OneToMany (mappedBy = "participante")
+    private Set<Ingresso> ingressos;
 
 }

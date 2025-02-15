@@ -17,7 +17,8 @@ public class Ingresso {
     @ManyToOne
     @JoinColumn(name = "evento_id")
     private evento evento;
-    @OneToMany (mappedBy = "ingresso")
-    private Set<Participante> participantes;
+    @ManyToOne
+    @JoinColumn(name = "participante_id")
+    private Participante participante;
 
 }
